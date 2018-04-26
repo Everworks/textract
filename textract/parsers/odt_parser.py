@@ -30,7 +30,7 @@ class Parser(BaseParser):
     def text_to_string(self, element):
         buff = u""
         if element.text is not None:
-            buff += element.text
+            buff += element.text + "\n"
         for child in element:
             if child.tag == self.qn('text:tab'):
                 buff += "\t"
